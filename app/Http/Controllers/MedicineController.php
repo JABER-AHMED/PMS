@@ -31,4 +31,27 @@ class MedicineController extends Controller
     	return redirect()->route('medicine.create')->with('success', 'Add Medicine Successfully');
     }
 
+    public function edit($id)
+    {
+    	$medicine = Medicine::find($id);
+    	return view('admin.medicine.edit')->withMedicine($medicine);
+    }
+
+    public function update(Request $request, $id)
+    {
+    	$this->validate($request, array(
+
+    		'medicine' => 'required'
+
+    	));
+
+    	$medicine = Medicine::find($id);
+
+    	$medicine->medicine = $request->medicine;
+
+    	$medicine->save();
+
+    	return redirect()->route('medicine.create', $medicine->id)->with('success','Medicine Updated Successfully....');
+    }
+
 }

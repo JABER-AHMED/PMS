@@ -35,7 +35,7 @@
 							<td>{{ $medicine->id }}</td>
 							<td style="text-align: center;">{{ $medicine->medicine }}</td>
 							<td>
-							<a href="" class="btn btn-default">Edit</a>
+							<a href="{{route('medicine.edit', $medicine->id)}}" class="btn btn-default">Edit</a>
 							<a href="" class="btn btn-danger">Delete</a>
 							</td>
 						</tr>

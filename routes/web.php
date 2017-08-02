@@ -24,6 +24,8 @@ Route::get('/patient', 'PatientController@create')->middleware('admin')->name('p
 Route::post('/patient', 'PatientController@store')->middleware('admin')->name('patient.store');
 Route::get('/admin/medicine/create', 'MedicineController@create')->middleware('admin')->name('medicine.create');
 Route::post('/admin/medicine/store', 'MedicineController@store')->middleware('admin')->name('medicine.store');
+Route::get('/admin/medicine/edit/{id}', 'MedicineController@edit')->middleware('admin')->name('medicine.edit');
+Route::post('/admin/medicine/update/{id}', 'MedicineController@update')->middleware('admin')->name('medicine.update');
 
 
 
