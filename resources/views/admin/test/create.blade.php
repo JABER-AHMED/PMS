@@ -8,12 +8,12 @@
 
 	<div class="row" style="margin-top: 70px;">
 		<div class="col-md-4">
-		<h1>Add Medicine</h1>
-			<form action="{{route('medicine.store')}}" method="POST">
+		<h1>Add Tests</h1>
+			<form action="{{route('test.store')}}" method="POST">
 				<div class="form-gorup">
-					<input type="text" name="medicine" class="form-control">
+					<input type="text" name="test_name" class="form-control">
 				</div>
-				<button type="submit" class="btn btn-primary">Add Medicine</button>
+				<button type="submit" class="btn btn-primary">Add Test</button>
 				{{csrf_field()}}
 			</form>
 		</div>
@@ -25,18 +25,18 @@
 					<thead>
 						<tr>
 							<th>No</th>
-							<th style="text-align: center;">Medicine</th>
+							<th style="text-align: center;">Test</th>
 							<th style="text-align: right; padding-right: 5rem;">Action</th>
 						</tr>
 					</thead>
 					<tbody>
-					@foreach($medicines as $medicine)
+					@foreach($tests as $test)
 						<tr>
-							<td>{{ $medicine->id }}</td>
-							<td style="text-align: center;">{{ $medicine->medicine }}</td>
+							<td>{{ $test->id}}</td>
+							<td style="text-align: center;">{{$test->test_name}}</td>
 							<td>
-							<a href="{{route('medicine.edit', $medicine->id)}}" class="btn btn-default">Edit</a>
-							<a href="{{route('medicine.delete', $medicine->id)}}" class="btn btn-danger">Delete</a>
+							<a href="{{route('test.edit', $test->id)}}" class="btn btn-default">Edit</a>
+							<a href="{{route('test.delete', $test->id)}}" class="btn btn-danger">Delete</a>
 							</td>
 						</tr>
 					@endforeach

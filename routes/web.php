@@ -26,6 +26,13 @@ Route::get('/admin/medicine/create', 'MedicineController@create')->middleware('a
 Route::post('/admin/medicine/store', 'MedicineController@store')->middleware('admin')->name('medicine.store');
 Route::get('/admin/medicine/edit/{id}', 'MedicineController@edit')->middleware('admin')->name('medicine.edit');
 Route::post('/admin/medicine/update/{id}', 'MedicineController@update')->middleware('admin')->name('medicine.update');
+Route::get('/admin/medicine/delete/{id}', 'MedicineController@delete')->middleware('admin')->name('medicine.delete');
+
+Route::get('/admin/test/create', 'TestController@create')->middleware('admin')->name('test.create');
+Route::post('/admin/test/store', 'TestController@store')->middleware('admin')->name('test.store');
+Route::get('/admin/test/edit/{id}', 'TestController@edit')->middleware('admin')->name('test.edit');
+Route::post('/admin/test/update/{id}', 'TestController@update')->middleware('admin')->name('test.update');
+Route::get('/admin/test/delete/{id}', 'TestController@delete')->middleware('admin')->name('test.delete');
 
 
 

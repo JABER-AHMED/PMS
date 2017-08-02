@@ -54,4 +54,13 @@ class MedicineController extends Controller
     	return redirect()->route('medicine.create', $medicine->id)->with('success','Medicine Updated Successfully....');
     }
 
+    public function delete($id)
+    {
+    	$medicine = Medicine::find($id);
+
+    	$medicine->delete();
+
+    	return redirect()->route('medicine.create')->with('success', 'Medicine deleted successfully');
+    }
+
 }
