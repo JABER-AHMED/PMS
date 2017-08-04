@@ -5,11 +5,13 @@
 @endsection
 
 @section('content')
-
+             
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
 			<div class="panel panel-primary">
-				<div class="panel-heading">Login</div>
+				<div class="panel-heading">
+					Login
+				</div>
 			    <div class="panel-body">
 			    	<form action="{{route('user.login')}}" method="post">
 			    		<div class="form-group">

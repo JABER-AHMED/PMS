@@ -1,4 +1,4 @@
-@extends('layouts.masteradmin')
+@extends('admin.layouts.master')
 
 @section('title')
 
@@ -21,7 +21,7 @@
 	<hr>
 		<div class="row">
 		<div class="col-md-10">
-				<table class="table table-plain">
+				<table class="table table-striped">
 					<thead>
 						<tr>
 							<th>No</th>

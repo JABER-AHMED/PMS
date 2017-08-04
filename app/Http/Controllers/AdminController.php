@@ -14,4 +14,9 @@ class AdminController extends Controller
     	$patients = Patient::all();
     	return view('doctors.index')->withDoctors($doctors)->withPatients($patients);
     }
+
+    public function index()
+    {
+    	return view('admin.index');
+    }
 }

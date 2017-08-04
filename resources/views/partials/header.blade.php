@@ -25,7 +25,7 @@
       </ul>
     <ul class="nav navbar-nav navbar-right">
     @if(Sentinel::check() && Sentinel::getUser()->roles()->first()->slug == 'doctor')
-      <a href="{{route('index')}}" class="btn btn-primary">Go To Admin</a>
+      <a href="{{route('admin')}}" class="btn btn-primary">Go To Admin</a>
       @endif
       @if(Sentinel::check())
          <li class="dropdown">

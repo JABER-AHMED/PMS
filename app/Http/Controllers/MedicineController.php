@@ -34,7 +34,8 @@ class MedicineController extends Controller
     public function edit($id)
     {
     	$medicine = Medicine::find($id);
-    	return view('admin.medicine.edit')->withMedicine($medicine);
+        $medicines = Medicine::all();
+    	return view('admin.medicine.edit')->withMedicine($medicine)->withMedicines($medicines);
     }
 
     public function update(Request $request, $id)

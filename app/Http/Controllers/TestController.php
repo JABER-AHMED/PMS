@@ -32,7 +32,8 @@ class TestController extends Controller
     public function edit($id)
     {
     	$test = Test::find($id);
-    	return view('admin.test.edit')->withTest($test);
+        $tests = Test::all();
+    	return view('admin.test.edit')->withTest($test)->withTests($tests);
     }
 
     public function update(Request $request, $id)

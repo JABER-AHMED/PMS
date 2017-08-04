@@ -22,7 +22,7 @@
     @if(Sentinel::check())
     <body>
     @else
-    <body style="background: #28272d;">
+    <body style="background-image: url('../img/develop.jpeg');">
     @endif
     @include('partials.header')
     <div class="container">
@@ -39,7 +39,6 @@
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
      <script>
       $( function() {
         $( "#datepicker" ).datepicker();
